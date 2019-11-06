@@ -72,7 +72,7 @@ const config = {
         test: /\.(ts|tsx)$/,
         use: [
           {
-            loader: 'awesome-typescript-loader',
+            loader: 'ts-loader',
             options: {
               getCustomTransformers: program => ({
                 before: [
