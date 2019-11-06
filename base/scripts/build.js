@@ -5,7 +5,7 @@ const rm = require('rimraf');
 const path = require('path');
 const chalk = require('chalk');
 const webpack = require('webpack');
-const config = require('../build/webpack.prod.config');
+const config = require('../webpack/webpack.prod.config');
 
 const spinner = ora('building for production...');
 spinner.start();

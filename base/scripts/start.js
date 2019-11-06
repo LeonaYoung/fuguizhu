@@ -12,7 +12,7 @@ const proxy = require('http-proxy-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 // eslint-disable-next-line
 const webpackDevMiddleware = require('webpack-dev-middleware');
-const webpackConfig = require('../build/webpack.dev.config');
+const webpackConfig = require('../webpack/webpack.dev.config');
 const proxyTable = require('../../config/proxy.conf');
 
 const app = express();
