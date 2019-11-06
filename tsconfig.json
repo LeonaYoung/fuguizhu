@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+      "outDir": "./dist/",
+      "sourceMap": true,
+      "noImplicitAny": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "removeComments": false,
+      "target": "es5",
+      "jsx": "react",
+      "baseUrl": "./",
+      "allowJs": true,
+      "paths": {
+        "components/*": ["./src/components/*"],
+        "containers/*": ["./src/containers/*"],
+        "utils/*": ["./src/utils/*"],
+        "config/*": ["config/*"],
+        "moment$": ["moment/moment.js"],
+        "base": ["./base"],
+      },
+      "experimentalDecorators": true,
+      "types": [
+        "node"
+      ],
+      "lib": [
+        "es6",
+        "es2015",
+        "dom",
+        "es2015.promise"
+      ],
+      "plugins": [
+        {
+          "name": "typescript-tslint-plugin",
+          "alwaysShowRuleFailuresAsWarnings": true,
+          "ignoreDefinitionFiles": true,
+          "configFile": "./tslint.json",
+          "suppressWhileTypeErrorsPresent": false
+        }
+      ]
+  },
+  "include": [
+      "./*.d.ts",
+      "./src/**/*"
+  ]
+}

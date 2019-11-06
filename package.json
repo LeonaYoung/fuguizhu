@@ -1,0 +1,140 @@
+{
+  "name": "fuguizhu",
+  "version": "0.0.1",
+  "description": "",
+  "private": false,
+  "scripts": {
+    "build_": "cross-env NODE_ENV=production webpack --config config/webpack.prod.config.js --color -p --progress --hide-modules --display-optimization-bailout",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --max_old_space_size=8000 base/scripts/start.js",
+    "build-prod": "node base/scripts/build.js",
+    "build": "node base/scripts/build.js",
+    "deploy": "node base/scripts/deploy.js",
+    "new-page": "./node_modules/.bin/sososo --page",
+    "new-component": "./node_modules/.bin/sososo --component"
+  },
+  "author": "lichun",
+  "license": "MIT",
+  "devDependencies": {
+    "eden-remote-deploy": "0.0.5",
+    "eslint-config-sofa-react": "^0.1.0",
+    "sososo": "^0.1.5",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-hot-middleware": "^2.24.3"
+  },
+  "dependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@types/hoist-non-react-statics": "^3.0.1",
+    "@types/intl": "^1.2.0",
+    "@types/invariant": "^2.2.29",
+    "@types/json2csv": "^4.4.0",
+    "@types/lodash": "^4.14.121",
+    "@types/node": "^11.9.3",
+    "@types/react": "^16.8.11",
+    "@types/react-dom": "^16.8.0",
+    "@types/react-intl": "^2.3.16",
+    "@types/react-redux": "^7.0.1",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/redux-immutable": "^4.0.1",
+    "@types/styled-components": "4.1.8",
+    "amap-js-api-typings": "^0.1.4",
+    "antd": "^3.23.6",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-add-react-displayname": "0.0.5",
+    "babel-plugin-add-react-displayname-babel7": "0.0.6-beta",
+    "babel-plugin-import": "^1.11.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-sofa-react": "^0.1.2",
+    "copy-webpack-plugin": "^5.0.3",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "eslint-import-resolver-webpack": "^0.10.1",
+    "eventsource-polyfill": "^0.9.6",
+    "exports-loader": "^0.7.0",
+    "express": "^4.16.4",
+    "file-loader": "^2.0.0",
+    "history": "4.7.2",
+    "hoist-non-react-statics": "^3.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "http-proxy-middleware": "^0.19.0",
+    "immutable": "^3.8.2",
+    "intl": "^1.2.5",
+    "invariant": "^2.2.4",
+    "jsbarcode": "^3.11.0",
+    "json-2-csv": "^3.5.3",
+    "json2csv": "^4.4.1",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "lodash": "^4.17.11",
+    "mini-css-extract-plugin": "^0.4.4",
+    "moment": "^2.24.0",
+    "offline-plugin": "^5.0.5",
+    "ora": "^3.4.0",
+    "prop-types": "^15.6.2",
+    "qrcode.react": "^0.9.3",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-hot-loader": "^4.8.4",
+    "react-intl": "^2.4.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-router-redux": "^4.0.8",
+    "redux": "^4.0.1",
+    "redux-immutable": "^4.0.0",
+    "redux-saga": "^0.16.2",
+    "redux-sofa-saga": "^1.0.2",
+    "reselect": "^4.0.0",
+    "sanitize.css": "^8.0.0",
+    "sofa-print": "^1.0.8",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^0.23.1",
+    "styled-components": "^4.0.3",
+    "ts-loader": "^5.3.3",
+    "ts-transformer-keys": "^0.3.5",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^3.6.0",
+    "tslint-sf-react": "0.0.2",
+    "typescript": "^3.6.2",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-merge": "^4.1.4",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "babel": {
+    "plugins": [
+      "@babel/plugin-syntax-dynamic-import",
+      [
+        "import",
+        {
+          "libraryName": "antd"
+        },
+        "styled-components"
+      ],
+      "babel-plugin-add-react-displayname-babel7"
+    ],
+    "presets": [
+      "sofa-react"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "sofa-react",
+    "settings": {
+      "import/resolver": {
+        "webpack": {
+          "config": "base/build/webpack.base.config.js"
+        }
+      }
+    },
+    "rules": {
+      "react/destructuring-assignment": "off",
+      "import/no-extraneous-dependencies": "off"
+    }
+  }
+}

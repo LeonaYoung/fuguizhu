@@ -1,0 +1,21 @@
+{
+  "extends": ["tslint-sf-react"],
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js",
+      "./node_modules/**/*.ts",
+      "node_modules/**"
+    ]
+  },
+  "rules": {
+    "no-implicit-dependencies": [true, ["containers", "utils", "components", "config", "base"]],
+    "no-submodule-imports":[true, "containers", "utils", "antd", "components", "config", "redux-saga", "history", "base"],
+    "jsx-wrap-multiline": false,
+    "jsx-no-lambda": false
+  },
+  "rulesDirectory": [
+    "node_modules/tslint-eslint-rules/dist/rules"
+  ]
+}
