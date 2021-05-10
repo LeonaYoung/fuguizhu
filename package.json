@@ -68,7 +68,7 @@
     "json2csv": "^4.4.1",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^0.4.4",
     "moment": "^2.24.0",
     "offline-plugin": "^5.0.5",
