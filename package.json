@@ -70,7 +70,7 @@
     "less-loader": "^4.1.0",
     "lodash": "^4.17.11",
     "mini-css-extract-plugin": "^0.4.4",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "offline-plugin": "^5.0.5",
     "ora": "^3.4.0",
     "prop-types": "^15.6.2",
